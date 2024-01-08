@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+.app-container {
+    background-color: #e3e4e0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.login-top {
+    height: 250px;
+    width: 100%;
+    background-color: #00a884;
+    position: absolute;
+    top: 0;
+}
+
+.login {
+    background-color: white;
+    border-radius: 5px;
+    padding: 75px 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    text-align: center;
+}
+
+.login>h1 {
+    color: #00a884;
+    margin: 0;
+}
+
+.login>img {
+    height: 200px;
+}
+
+.login>button {
+    margin-top: 30px;
+    background-color: #38a341 !important;
+    color: white;
+    padding: 15px;
+}
+
+.home-container {
+    display: flex;
+    background-color: white;
+    height: 90vh;
+    width: 95%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-container {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #00a884;
+    color: white;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-profile>h2 {
+    margin-left: 10px;
+}
+
+.sidebar-body {
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.chat-container {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nochat-container {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafe;
+}
+
+
+.nochat-container>img {
+    height: 50%;
+    width: 50%;
+}
+
+.nochat-container>h1 {
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.chats-profile {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.chats-profile>h3 {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.chats-container {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 10px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.chats-container:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
+}
+
+.chats-delete {
+    display: none;
+}
+
+.chats-container:hover .chats-delete {
+    display: block;
+}
+
+.chat-header {
+    display: flex;
+    padding: 10px;
+    background-color: lightgray;
+    justify-content: space-between;
+}
+
+.chat-profile {
+    margin-left: 10px;
+}
+
+.chat-profile>p {
+    font-size: 14px;
+    margin-top: 3px;
+    color: gray;
+}
+
+.chat-body {
+    flex: 1;
+    background-image: url('./Images/chat.png');
+    background-repeat: repeat;
+    background-position: center;
+    overflow-y: scroll;
+    padding: 10px 10px 0px 10px;
+
+}
+
+.chat-message {
+    padding: 5px 10px;
+    background-color: white;
+    width: fit-content;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.chat-name {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #00a884;
+}
+
+.chat-time {
+    text-align: right;
+    font-size: 11px;
+    color: gray;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.chat-sent {
+    margin-left: auto;
+    background-color: #dcf8c6;
+}
+
+.EmojiPickerReact {
+    width: auto !important;
+}
+
+.emoji-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+aside.EmojiPickerReact.epr-main {
+    --epr-picker-border-radius: 0px;
+}
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.chat-footer>form {
+    flex: 1;
+    display: flex;
+}
+
+.chat-footer>form>input {
+    flex: 1;
+    margin: 0 10px;
+    border: none;
+    outline: none;
+    border-radius: 17.5px;
+    padding: 0 10px;
+}
+
+.chat-footer>form>button {
+    height: 35px;
+    width: 35px;
+    background-color: #00a884;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+}
+
+.modal-container {
+    padding: 10px;
+}
+
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.close-btn>button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.modal-container>form {
+    display: flex;
+}
+
+.modal-container>form>input {
+    flex: 1;
+    border: 1px solid gray;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.modal-container>form>button {
+    border: none;
+    padding: 0 5px;
+    color: white;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #00a884;
+    cursor: pointer;
+}
+
+.chats-profile .MuiAvatar-root .MuiAvatar-img {
+    background-color: lightgray;
+}
+
+.chat-header .MuiAvatar-root .MuiAvatar-img {
+    background-color: white;
+}
+
+.chat-date {
+    width: fit-content;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    margin: 0px auto 10px;
+}
+
+.delete-sent {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    visibility: hidden;
+}
+
+.delete-receive {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    visibility: hidden;
+}
+
+.chat-message:hover .delete-receive {
+    visibility: visible;
+}
+
+.chat-sent:hover .delete-sent {
+    visibility: visible;
+}
+
+.modal-content {
+    position: absolute;
+    width: 250px;
+    background-color: lightgray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    text-align: center;
+}
+
+.modal-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-btn>button {
+    color: #00a884;
+    padding: 2px;
+    border: 2px solid #00a884;
+    border-radius: 10px;
+    text-transform: inherit !important;
+}
