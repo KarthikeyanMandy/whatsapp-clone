@@ -2,6 +2,20 @@
 
 # Frontend
 
+**Packages Used**
+
+MUI - Material-UI is a popular React UI framework that implements Google's Material Design. It offers components for building user interfaces following the Material Design principles.
+
+Axios - A promise-based HTTP client used for making HTTP requests. It can be used both in browsers and Node.js environments.
+
+Emoji-picker-react - A React component library that allows users to pick emojis and incorporate them into applications.
+
+Firebase - Firebase is a platform by Google that provides various services for building web and mobile applications, including authentication, real-time database, hosting, etc.
+
+Pusher-js -  A JavaScript library for working with Pusher, a service that enables real-time communication between servers and clients using WebSockets.
+
+React-router-dom - React Router Dom is used to build single-page applications i.e. applications that have many pages or components but the page is never refreshed instead the content is dynamically fetched based on the URL.
+
 **1)Index.js**
 
 Establishing a root element, rendering the main App component, and enclosing it in a StateProvider for state management constitute the creation of a React application. 
@@ -63,6 +77,22 @@ It has a service object with multiple methods for different kinds of group and m
 Every component contains CSS guidelines for how they should look and behave.
 
 # Backend
+
+**Packages Used**
+
+Body Parser - Middleware for Node.js that parses incoming request bodies. It's commonly used to parse data in POST requests.
+
+Cors - Cross-Origin Resource Sharing (CORS) middleware for Node.js, enabling secure communication between different origins in a web browser.
+
+Dotenv - A module that loads environment variables from a .env file into process.env. This helps manage environment-specific configuration settings in Node.js applications.
+
+Express - A fast, minimalist web framework for Node.js. It simplifies the process of building web applications by providing a robust set of features for routing, middleware, and handling HTTP requests and responses.
+
+Mongoose - An elegant MongoDB object modeling tool for Node.js that provides a straightforward schema-based solution to model application data.
+
+Morgan - HTTP request logger middleware for Node.js. It generates logs of incoming HTTP requests, providing details such as request method, URL, status code, and response time.
+
+Pusher -  A library for working with Pusher, a service that facilitates real-time communication between servers and clients using WebSockets. It simplifies the integration of real-time features into applications.
 
 **1)app.js**
 
