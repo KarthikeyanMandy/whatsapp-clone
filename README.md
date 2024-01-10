@@ -4,98 +4,98 @@
 
 **1)Index.js**
 
-It sets up a React app by creating a root element, rendering the main App component wrapped in a StateProvider for state management, using a reducer and initialState.
+Establishing a root element, rendering the main App component, and enclosing it in a StateProvider for state management constitute the creation of a React application. 
 
 **2)App.js**
 
-It is the main component renders Home component if user exists that stored in local storage otherwise renders Login component.
+If the user is present in local storage, it shows the Home component; if not, it shows the Login component.
 
 **3)Login.js**
 
-It uses google-sign functionality with firebase for sign in to the app.It stores the user in local storage after successful login and updates the state value using dispatch function.
+Firebase uses Google sign-in capability to authenticate users. After a successful login, the dispatch function updates the state value and stores user information locally.
 
 **4)Home.js**
 
-It has a sibebar component with user profile, group lists,add group button and logout button.It renders chat component if any group selected in the list of groups otherwise it renders no chat component.
+It consists of a sidebar component that includes the user profile, group lists, add group button, and logout button. When a group is selected from the list, the chat component appears; otherwise, it does not.
 
 **5)Sidebar.js**
 
-It has user profile with user avatar,user name and a menu button to add group and logout.It renders chats component for all the elements in the groups array.
+It displays a user profile with a menu button, username, and avatar. For every element in the group array, the chat component is shown.
 
 **6)Chats.js**
 
-It has group lists with group name and group avatar.It has delete button to delete the group.
+It features group lists complete with avatars and group names. To remove the group, click the delete button.
 
 **7)Chat.js**
 
-It has all messages for the selected group with groupavatar,groupname,group when created , and close chat to close the current chat and clear chat to delete all the messages for the current chat button.It has a input field to send a message with emoji option.It has a delete icon for each message to delete.
+It contains all of the messages for the chosen group along with the group name, avatar, and creation date. You can click the close chat or clear chat buttons to get rid of all of the messages associated with the current chat button. It features a message entry field with an emoji feature. Every communication contains a delete icon that can be clicked.
 
 **8)NoChat.js**
 
-It renders when anyone of the group is not selected in the groups list in the sidebar component.
+When a member of the group is not chosen in the sidebar component's groups list, it renders.
 
 **9)Modal.js**
 
-It has a input field to add a new group.
+An input area is accessible to introduce a new group.
 
 **10)reducer.js**
 
-It has the initial state value and a reducer function to change the state value according to the action parameter.
+It has a reducer function to modify the initial state value based on the action parameter.
 
 **11)Stateprovider.js**
 
-It provides the state value and reducer function to its children components wrapped in context provider.
+It wraps the context provider around its child components and gives them the state value and reducer function.
 
 **12)Axios.js**
 
-It uses axios library to make HTTP requests from browsers.It has base url and headers for the data type to sent along the request.
+To send HTTP requests from browsers, it makes use of the Axios library. It contains headers for the data type to send with the request in addition to the main URL.
 
 **13)firebase.js**
 
-It contains the configuration for initializing the firebase services such as initialize the firebase app ,get authentication service  and using google auth provider from firebase app.
+It includes the setup needed to start the Firebase services, including starting the Firebase app, obtaining authentication, and utilizing the Firebase app's Google auth provider.
 
 **14)Service.js**
 
-It has a service object with various methods for different API requests related groups and messages.
+It has a service object with multiple methods for different kinds of group and message-related API requests.
 
 **15)Style.css**
 
-It has the css rules for all the components for their appearence and behaviour.
+Every component contains CSS guidelines for how they should look and behave.
 
 # Backend
 
 **1)app.js**
 
-It sets up express server with middleware cors for cross origin requests, uses defined router for handling routes,using morgan for logging http requests,using body-parser for request body parsing and listens defined port.
+It uses a defined router to handle routes, an express server with middleware cors for managing cross-origin requests, Morgan for logging HTTP requests, a body parser for parsing request bodies, and a determined port for listening.
 
 **2).env**
 
-It has the port number for the server to listen and has the url to connect the mongodb database.
+It contains the URL to connect to the MongoDB database and the port number on which the server should listen.
 
 **3)db.js**
 
-It uses mongoose library to connect to a mongodb database with the url from env file.
+It connects to a MongoDB database using the URL from the environment file and the Mongoose library.
 
 **4)pusher.js**
 
-It has pusher module for the real time data updates and has pusher object with configurations of the pusher app.
+It has a pusher module for real-time data updates and a pusher object with pusher app options.
 
 **5)group.js**
 
-It has the schema for the structure of the data to be stored in mongodb collections especially groups with name and timestamp.It has group model that can be used in other modules of the application.
+It contains the schema needed to store data in MongoDB collections with a specific structure, particularly for groups including names and timestamps. It has a group model that may be applied to other application modules.
 
 **6)message.js**
 
-It has the schema for the structure of the data to be stored in mongodb collections especially messages with username,message,userId,groupId and timestamp.It has group model that can be used in other modules of the application.
+It contains the schema needed to organize the data in MongoDB collections, particularly messages that have the following fields: timestamp, userId, groupId, username, and message. It has a group model that may be applied to other application modules.
 
 **7)groupservice.js**
 
-It has different functions uses mongoose methods to interact with mongodb group collection to create,find one group,find all groups and delete group.It uses pusher module to trigger events for the real time updates.
+It may be used to create, find one group, find all groups, and delete groups using Mongoose methods in conjunction with MongoDB group collection. For real-time updates, a pusher module is used to initiate events.
 
 **8)messageservice.js**
 
-It has different functions uses mongoose methods to interact with mongodb message collection to create,find all messages and delete one message and all messages.It uses pusher module to trigger events for the real time updates.
+It can generate, find all messages, delete one message, and interact with MongoDB message collection using a variety of Mongoose methods. For real-time updates, a pusher module is used to initiate events.
 
 **9)routes.js**
 
-It has an express router to define different HTTP routes.The routes has API endpoints that client can interact with to perform operations like creating groups and message etc.
+It can specify several HTTP routes thanks to its express router. Clients can interact with the routes' API endpoints to carry out tasks like sending messages and forming groups, among other things.
